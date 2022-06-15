@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LazaroApp</string>
+    <string name="registrotxt">Registro</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="android_sdk_places_api_key">AIzaSyAUhjGE-UpRBy1Vr9K433fuEn3d_igauiQ</string>
+    <string name="label_origen">Dirección Origen:</string>
+    <string name="label_destino">Dirección Destino:</string>
+    <string name="btn_modificar">Modificar</string>
+</resources>
