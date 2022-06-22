@@ -3,11 +3,11 @@ package cl.inacap.lazaroapp.dto;
 public abstract class Usuario {
 
     protected String rut;
-    protected String nombres;
     protected String apellidos;
-    protected int edad;
-    protected String correo;
     protected String celular;
+    protected String correo;
+    protected int edad;
+    protected String nombres;
     protected Calificasion calificasion;
 
 public Usuario(String rut, String nombres, String apellidos, int edad, String correo, String celular, Calificasion calificasion){
