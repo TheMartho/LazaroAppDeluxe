@@ -9,26 +9,79 @@
 
     <TextView
         android:id="@+id/tvOrigen"
+        android:textSize="25dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/label_origen" />
 
     <Button
         android:id="@+id/btnOrigen"
+        android:textSize="25dp"
         android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
         android:layout_height="wrap_content"
         android:text="@string/btn_modificar" />
 
     <TextView
         android:id="@+id/tvDestino"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/label_destino" />
 
     <Button
         android:id="@+id/btnDestino"
+        android:textSize="25dp"
+        android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_modificar" />
+    <!-- Map -->
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <!-- Info de viaje -->
+
+    <LinearLayout
+        android:id="@+id/ViajeInfo"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ViajeDistancia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Distancia: "
+            ></TextView>
+
+        <TextView
+            android:id="@+id/ViajeTiempo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tiempo estimado: "
+            ></TextView>
+
+        <TextView
+            android:id="@+id/ViajePrecio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Precio: "
+            ></TextView>
+
+    </LinearLayout>
 
 </LinearLayout>
