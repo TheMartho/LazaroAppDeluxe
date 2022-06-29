@@ -36,8 +36,11 @@ public class SolicitarViajeActivity extends AppCompatActivity implements OnMapRe
     private static int DESTINO_REQUEST_CODE = 2;
     Button btnOrigen;
     Button btnDestino;
+    Button btnViajar;
     TextView tvOrigen;
     TextView tvDestino;
+    String strOrigen;
+    String strDestino;
     private GoogleMap mMap;
     private LatLng mOrigen;
     private  LatLng mDestino;
@@ -51,6 +54,19 @@ public class SolicitarViajeActivity extends AppCompatActivity implements OnMapRe
         Places.initialize(getApplicationContext(),getString(R.string.android_sdk_places_api_key));
         tvDestino = (TextView) findViewById(R.id.tvDestino);
         tvOrigen = (TextView) findViewById(R.id.tvOrigen);
+
+        btnViajar = (Button) findViewById(R.id.btnViajar);
+
+        btnViajar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ConfirmarViajeActivity.class);
+                intent.putExtra("Origen", strOrigen);
+                intent.putExtra("Destino", strDestino);
+                startActivity(intent);
+            }
+        });
+
         btnOrigen = (Button) findViewById(R.id.btnOrigen);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -106,8 +122,8 @@ public class SolicitarViajeActivity extends AppCompatActivity implements OnMapRe
             if (resultCode == RESULT_OK) {
                 Place place = Autocomplete.getPlaceFromIntent(data);
                 Log.i(TAG, "Place: Name y ID" + place.getName() + ", " + place.getId() + ", " + place.getLatLng() + ", " + place.getAddress());
-
                 tvOrigen.setText("Direccion Origen: " + place.getName());
+                strOrigen=place.getName();
                 mOrigen=place.getLatLng();
                 añadirMarcador(mOrigen, "Origen");
 
@@ -125,7 +141,7 @@ public class SolicitarViajeActivity extends AppCompatActivity implements OnMapRe
             if (resultCode == RESULT_OK) {
                 Place place = Autocomplete.getPlaceFromIntent(data);
                 Log.i(TAG, "Place: Name y ID" + place.getName() + ", " + place.getId() + ", " + place.getLatLng()+ ", " + place.getAddress());
-
+                strDestino=place.getName();
                 tvDestino.setText("Direccion Destino: " + place.getName());
                 mDestino= place.getLatLng();
                 añadirMarcador(mDestino,"Destino");
@@ -144,6 +160,7 @@ public class SolicitarViajeActivity extends AppCompatActivity implements OnMapRe
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.setMyLocationEnabled(true);
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.setMinZoomPreference(15f);
         mMap.setMaxZoomPreference(20f);

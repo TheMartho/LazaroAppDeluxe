@@ -1,14 +1,15 @@
 package cl.inacap.lazaroapp.dto;
 
 public class Calificasion {
-    private int cantidadeEstrellas;
+    private  int id;
+    private float cantidadeEstrellas;
     private String descripcion;
 
-    public int getCantidadeEstrellas() {
+    public float getCantidadeEstrellas() {
         return cantidadeEstrellas;
     }
 
-    public void setCantidadeEstrellas(int cantidadeEstrellas) {
+    public void setCantidadeEstrellas(float cantidadeEstrellas) {
         this.cantidadeEstrellas = cantidadeEstrellas;
     }
 
@@ -18,5 +19,13 @@ public class Calificasion {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

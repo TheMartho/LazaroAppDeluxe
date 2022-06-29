@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "963696597573",
+    "firebase_url": "https://lazaro-637c1-default-rtdb.firebaseio.com",
+    "project_id": "lazaro-637c1",
+    "storage_bucket": "lazaro-637c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963696597573:android:f027de112014d0587e212c",
+        "android_client_info": {
+          "package_name": "cl.inacap.lazaroapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963696597573-j8n3cks7en3rg6f2oibhpiuoqlfqo0pa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRlA0pQYVwlHnDIgaEmB8AxZhBuSlD3CU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "963696597573-j8n3cks7en3rg6f2oibhpiuoqlfqo0pa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

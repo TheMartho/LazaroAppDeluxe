@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HistorialActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/titulo_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="LazaroApp"
+            android:textSize="35dp"
+            android:textStyle="bold"></TextView>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/googlemaps" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Ej1texto1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Viaje desde Inacap Valparaiso"
+            android:textSize="20dp"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/Ej1texto2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Destino Santa Isabel Valparaiso"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/Ej1texto3"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:text="Duración del servicio: 3 Horas 23 minutos"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnDetalle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:text="Ver Detalles"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/Ej2texto1"
+            android:layout_marginTop="30dp"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Viaje desde Caleta Portales" />
+
+
+        <TextView
+            android:id="@+id/Ej2texto2"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destino Mall Marina Viña del mar " />
+
+        <TextView
+            android:id="@+id/Ej2texto3"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duración del servicio: 4 Horas 17 minutos" />
+
+        <Button
+            android:id="@+id/btnDetalle2"
+            android:layout_marginTop="30dp"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text="Ver Detalles" />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

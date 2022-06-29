@@ -30,7 +30,8 @@ android {
         viewBinding true
     }
 }
-
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.4.2'
@@ -47,4 +48,8 @@ dependencies {
     // Declare the dependency for the Realtime Database library
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation 'com.google.firebase:firebase-database'
+
+
+    implementation platform('com.google.firebase:firebase-bom:30.2.0')
+    implementation 'com.google.firebase:firebase-analytics'
 }

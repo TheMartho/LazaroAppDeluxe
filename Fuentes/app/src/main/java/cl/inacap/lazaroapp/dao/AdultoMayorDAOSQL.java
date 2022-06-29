@@ -19,7 +19,6 @@ public class AdultoMayorDAOSQL implements  AdultoMayorDAO{
     @Override
     public AdultoMayor save(AdultoMayor am) {
 
-
         DatabaseReference myRef = database.getReference("Usuario/rut/apellidos");
         myRef.setValue("Alfaro");
         return null;

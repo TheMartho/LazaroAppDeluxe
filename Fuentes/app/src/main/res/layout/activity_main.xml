@@ -4,20 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/azulTiffany"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="321dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="60dp"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titulo_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:text="LazaroApp"
+                android:textSize="40sp"
+                android:textStyle="bold"></TextView>
 
             <ImageView
                 android:id="@+id/imageView1"
@@ -27,14 +36,43 @@
 
         </LinearLayout>
 
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <Button
             android:id="@+id/btn_elegir_viaje"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
+            android:textSize="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Viajar" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:textSize="25dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="20dp"
-            android:text="¿A donde quiere ir?" />
+            android:text="Historial"></Button>
 
     </LinearLayout>
+
 </LinearLayout>

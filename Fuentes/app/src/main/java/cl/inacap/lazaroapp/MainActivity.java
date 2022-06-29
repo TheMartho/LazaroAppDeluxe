@@ -2,6 +2,10 @@ package cl.inacap.lazaroapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+
+import cl.inacap.lazaroapp.dao.AdultoMayorDAO;
+import cl.inacap.lazaroapp.dao.AdultoMayorDAOSQL;
+import cl.inacap.lazaroapp.dao.BD;
 import cl.inacap.lazaroapp.dto.AdultoMayor;
 
 import android.Manifest;
@@ -16,14 +20,24 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
-
     Button btnElegirViaje;
+    Button btnHistorial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         verificarPermisos();
+
+        btnHistorial = (Button) findViewById(R.id.btnHistorial);
+        btnHistorial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),HistorialActivity.class);
+                startActivity(intent);
+            }
+        });
+
         btnElegirViaje = (Button) findViewById(R.id.btn_elegir_viaje);
         btnElegirViaje.setOnClickListener(new View.OnClickListener() {
             @Override

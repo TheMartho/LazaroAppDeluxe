@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CalificarActivity">
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="161dp"
+        app:srcCompat="@drawable/googlemaps" />
+
+    <TextView
+        android:id="@+id/texto1"
+        android:layout_marginTop="30dp"
+            android:textSize="23sp"
+        android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Viaje desde Inacap Valparaiso con destino Santa Isabel Valparaiso" />
+
+
+    <TextView
+        android:id="@+id/texto2"
+        android:textSize="23sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conductor: Andrés Gonzales" />
+
+    <TextView
+        android:id="@+id/texto3"
+        android:textSize="23sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duración del servicio: 3 Horas 23 minutos" />
+
+    <TextView
+        android:textSize="23sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha: 18/06/2022" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="0"
+            ></RatingBar>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:text="Volver"></Button>
+
+
+</LinearLayout>
