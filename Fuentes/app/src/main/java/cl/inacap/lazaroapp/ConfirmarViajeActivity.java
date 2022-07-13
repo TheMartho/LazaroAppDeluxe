@@ -40,7 +40,7 @@ public class ConfirmarViajeActivity extends AppCompatActivity {
 
         try{
             String favorito = getIntent().getStringExtra("favorito");
-            if(favorito.isEmpty()){
+            if(favorito!=null){
                 lazaroFavorito.setText("Priorizando viajar con "+favorito);
             }
 

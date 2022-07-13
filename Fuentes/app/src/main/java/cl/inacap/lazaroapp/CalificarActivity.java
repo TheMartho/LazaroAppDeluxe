@@ -97,11 +97,18 @@ public class CalificarActivity extends AppCompatActivity {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
                 ratingBar.setRating(v);
-                Favorito f = new Favorito();
-                f.setNombre("Andrés Gonzales");
-                f.setFavorito(true);
-                favoritos.add(f);
-                Toast.makeText(CalificarActivity.this, "Se a guardado el Lazaro como favorito",Toast.LENGTH_LONG).show();
+                if(v==0){
+                    favoritos.remove(0);
+                    Toast.makeText(CalificarActivity.this, "Se a eliminado el Lazaro de favoritos",Toast.LENGTH_LONG).show();
+                }else{
+                    Favorito f = new Favorito();
+                    f.setNombre("Andrés Gonzales");
+                    f.setFavorito(true);
+                    favoritos.add(f);
+                    Toast.makeText(CalificarActivity.this, "Se a guardado el Lazaro como favorito",Toast.LENGTH_LONG).show();
+                }
+
+
             }
         });
 
