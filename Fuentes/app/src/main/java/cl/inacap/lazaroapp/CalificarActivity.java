@@ -14,25 +14,33 @@ import java.util.List;
 
 import cl.inacap.lazaroapp.dao.CalificasionesDAO;
 import cl.inacap.lazaroapp.dao.CalificasionesDAOLista;
+import cl.inacap.lazaroapp.dao.Favorito;
+import cl.inacap.lazaroapp.dao.FavoritosDAO;
+import cl.inacap.lazaroapp.dao.FavoritosDAOLista;
 import cl.inacap.lazaroapp.dao.cDAO;
 import cl.inacap.lazaroapp.dto.Calificasion;
 
 public class CalificarActivity extends AppCompatActivity {
 
     private RatingBar ratingBar;
+    private  RatingBar fav;
     private Button btnVolver;
     private TextView texto1;
     private TextView texto2;
     private TextView texto3;
     private List<Calificasion> calificasiones;
     private cDAO cDAO = CalificasionesDAOLista.getInstance();
+    private List<Favorito> favoritos;
+    private FavoritosDAO fDAO = FavoritosDAOLista.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calificar);
         calificasiones = cDAO.getAll();
+        favoritos = fDAO.getAll();
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
+        fav = (RatingBar) findViewById(R.id.favorito);
         String id = getIntent().getStringExtra("id");
         texto1=(TextView) findViewById(R.id.texto1);
         texto2=(TextView) findViewById(R.id.texto2);
@@ -81,7 +89,22 @@ public class CalificarActivity extends AppCompatActivity {
                 }else{
                     calificasiones.get(1).setCantidadeEstrellas(v);
                 }
+
             }
         });
+
+        fav.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
+                ratingBar.setRating(v);
+                Favorito f = new Favorito();
+                f.setNombre("Andrés Gonzales");
+                f.setFavorito(true);
+                favoritos.add(f);
+                Toast.makeText(CalificarActivity.this, "Se a guardado el Lazaro como favorito",Toast.LENGTH_LONG).show();
+            }
+        });
+
+
     }
 }

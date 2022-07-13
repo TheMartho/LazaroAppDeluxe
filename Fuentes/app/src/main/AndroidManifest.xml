@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LazaroApp">
         <activity
+            android:name=".LazaroFavoritoActivity"
+            android:exported="false" />
+        <activity
             android:name=".CalificarActivity"
             android:exported="false" />
         <activity
